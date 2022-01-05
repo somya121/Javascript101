@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+Javascript
+        </title>
+    </head>
+    <body>
+<p id="text">Hello World!</p>
+<button id="change">Change Text</button>
+
+<p id="secondp">Javascript is fun</p>
+<button id="secondb">Append Text</button>
+<p id="empty"></p>
+<button id="appear">view</button>
+<p id ="style">Changes in the style</p>
+<button id="styletxt">Style Text</button>
+<script type="text/Javascript">
+
+document.getElementById("change").onclick = function(){
+  alert("Button Clicked!");
+  document.getElementById("text").innerHTML = "Hello Somya!";}
+  document.getElementById("secondb").onclick = function()
+  {
+  document.getElementById("secondp").innerHTML = "I think "+  document.getElementById("secondp").innerHTML+ " to learn!";
+}
+document.getElementById("appear").onclick = function(){
+
+   document.getElementById("empty").innerHTML = "This is Fun!";
+}
+document.getElementById("styletxt").onclick = function(){
+    document.getElementById("style").style.color ="red";
+    document.getElementById("style").style.fontSize ="90px";
+}
+</script>
+    </body>
+</html>

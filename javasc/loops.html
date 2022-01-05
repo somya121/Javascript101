@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>loops</title>
+</head>
+
+<body>
+    <div id="tweet">
+
+    </div>
+    <script type="text/javascript">
+
+        var tweetstring = "";
+        //Creating an array
+        var tweets = ["hello", "What a day", "Pizza is great", "Its sunny evrywhere"];
+        //For Loop
+        for (var i = 0; i < tweets.length; i++) {
+
+            tweetstring = tweetstring + "<p>" + tweets[i] + "</p>";
+        }
+        document.getElementById("tweet").innerHTML = tweetstring;
+
+    </script>
+</body>
+
+</html>

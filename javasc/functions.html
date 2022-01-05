@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>loops</title>
+</head>
+
+<body>
+    <p>How Many fingers are you holding up ? </p>
+    <!------Using select inplace of input so that the user does not enter any number greater than 6---->
+    <select id="number">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+    <button id="guess">Guess</button>
+    <!---Javascript------>
+    <script type="text/javascript">
+        //function definition
+        function doGuess(correct) {
+            var guess = Math.random();
+            guess = guess * 6;//A random number selected b/w 0 and 6
+            guess = Math.floor(guess);
+            if (guess == correct) {
+                return true;
+
+            }
+            else {
+                return false;
+            }
+        }
+        document.getElementById("guess").onclick = function () {
+            var number = document.getElementById("number").value;
+            var gotit = false;
+            var numberOfGuesses = 1;
+            while (gotit == false)//Using Boolean 
+            {
+                if (doGuess(number) == true) {
+                    gotit = true;
+                    alert("Got It!. It was " + number + " and it too me " + numberOfGuesses + " guesses");
+                }
+                else {
+                    numberOfGuesses++;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>If Statement</title>
+</head>
+
+<body>
+    <p>What is the magic word</p>
+    <input id="magic" type="text">
+    <p><button id="checkMagic">Enter</button></p>
+    <script type="text/javascript">
+        document.getElementById("checkMagic").onclick = function () {
+            //storing the input value in mgc
+            var mgc = document.getElementById("magic").value;
+            //assigning magicWord to leviosa
+            var magicWord = "leviosa";
+            //Implementing is statement
+            if (mgc == magicWord) {
+                alert("True");
+            }
+            else {
+                alert("Nope, not correct");
+            }
+        }
+    </script>
+</body>
+
+</html>

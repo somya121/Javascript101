@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>
+        Variables
+    </title>
+</head>
+
+<body>
+
+    <input id="txt" type="text">
+    <button id="bt">Change the text</button>
+    <p id="vanish">This is some text</p>
+    <!----jAVASCRIPT------>
+    <script type="text/javascript">
+        //Button on click changes the value 
+        document.getElementById("bt").onclick = function () {
+            var textEntered = " ";
+            textEntered = document.getElementById("txt").value;
+            document.getElementById("vanish").innerHTML = textEntered;
+        }
+    </script>
+
+</body>
+
+</html>
